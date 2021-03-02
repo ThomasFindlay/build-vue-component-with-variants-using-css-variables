@@ -1,9 +1,9 @@
 <template>
   <VariantStyleProvider :variant="variant">
     <template #default="{ variantStyle }">
-      <button :class="[$style.baseButton, variantStyle]" v-bind="$attrs">
+      <div :class="[$style.baseTag, variantStyle]" v-bind="$attrs">
         <slot />
-      </button>
+      </div>
     </template>
   </VariantStyleProvider>
 </template>
@@ -26,8 +26,9 @@ export default {
 </script>
 
 <style module>
-.baseButton {
+.baseTag {
   border: none;
+  border-radius: 1.5rem;
   padding: 0.6rem 1rem;
 }
 </style>
